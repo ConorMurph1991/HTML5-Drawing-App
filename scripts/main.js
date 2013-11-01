@@ -13,11 +13,14 @@ var isMouseMoving = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+context.lineWidth = radius * 2;
+
 
 /* Checks if mouse is down */
-var startDraw = function() {
+var startDraw = function(e) {
 
 	isMouseMoving = true;
+	draw(e);
 
 }
 
@@ -26,9 +29,13 @@ var draw = function(e) {
 
 	if(isMouseMoving)
 	{
+		context.lineTo(e.clientX, e.clientY);
+		context.stroke();
 		context.beginPath();
 		context.arc(e.clientX, e.clientY, radius, 0, Math.PI * 2);
 		context.fill();
+		context.beginPath();
+		context.moveTo(e.clientX, e.clientY);
 	}
 	
 }
@@ -37,6 +44,7 @@ var draw = function(e) {
 var endDraw = function() {
 
 	isMouseMoving = false;
+	context.beginPath();
 
 }
 

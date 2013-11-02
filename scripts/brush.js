@@ -35,7 +35,16 @@ var decreaseBrushSize = function() {
 
 /* Increasing the size of the brush */
 var increaseBrushSize = function() {
-	setBrushSize(brushSize + 5);
+	
+	if(brushSize == minSize)
+	{
+		setBrushSize(brushSize + 4);
+	}
+	else
+	{
+		setBrushSize(brushSize + 5);
+	}
+	
 }
 
 

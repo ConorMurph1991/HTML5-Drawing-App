@@ -22,10 +22,18 @@ var setBrushSize = function(newBrushSize) {
 		newBrushSize = maxSize;
 	}
 	
-	brushSize = newBrushSize;
+	brushSize = newBrushSize;	
 	context.lineWidth = brushSize * 2;
-	brushSizeValue.innerHTML = brushSize;
 	
+	if(brushSize < 10)
+	{
+		brushSizeValue.innerHTML = "0" + brushSize;
+	}
+	else
+	{
+		brushSizeValue.innerHTML = brushSize;
+	}
+		
 }
 
 /* Decreasing the size of the brush */

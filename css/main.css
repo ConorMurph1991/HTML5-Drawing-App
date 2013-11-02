@@ -1,6 +1,12 @@
 /* CSS Document */
 
 
+/* ====================
+
+	General Styles
+	
+   ==================== */
+
 * {
 	margin:0;
 	padding:0;
@@ -9,9 +15,8 @@
 }
 
 body {
-	font-family:sans-serif;
+	font-family: Arial, Helvetica, sans-serif; 
 	font-size:18px;
-	color:#ffffff;
 	overflow:hidden;
 }
 
@@ -19,38 +24,85 @@ header {
 	width:100%;
 	height:75px;
 	padding:10px 40px;
-	background-color:#333333;
+	background-color:#111111;
 	position:fixed;
 	top:0;
 }
 
 
-#brand {
+.button {
+	width:25px;
+	height:25px;
+	margin:0 0 0 10px;
+	padding:4px 3px 0 3px;
+	cursor:pointer;	
 	display:inline-block;
-	font-family: 'Lobster', cursive;
-	color:#CC0E00;
+	text-align:center;
+	
+	border-radius:2px;
+	-moz-border-radius:2px;/*gecko - mozilla*/ 
+	-webkit-border-radius:2px; /*new webkit - Chrome and Safari*/
+	
+	box-shadow:#e3e3e3 0 1px 1px;	
+	-moz-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(255,255,255,0.7);/*gecko - mozilla*/ 
+	-webkit-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(255,255,255,0.7);/*new webkit - Chrome and Safari*/		
+	behavior:url(PIE.htc);				
 }
 
 
-#brush {
+
+/* ====================
+
+	Brush Area Styles
+	
+   ==================== */
+
+#brushArea {
 	width:20%;
 	margin:25px 0 0 25px;
-	display:inline-block;
 }
 
-.brushSizeControl {
-	width:27px;
-	height:27px;
-	margin:0 0 0 10px;
-	padding:6px 3px 0 3px;
+#brushArea p {
 	display:inline-block;
-	background-color:#4c4c4c;
-	text-align:center;
-	cursor:pointer;
+	color:#ffffff;
+	text-shadow:-2px 1px 0px rgba(84, 84, 84, 0.8);
 }
 
-.brushSizeControl:last-child {
+#increaseSize {
 	margin:0;
+}
+
+
+
+/* ====================
+
+	Colour Styles
+	
+   ==================== */
+
+.white {
+	border:1px solid #d3d3d3;
+	color:#111111;
+	text-shadow:1px 1px 0px #f8f8f8;	
+    background:#ededed; /*fallback for non-CSS3 browsers*/
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9) to(#ededed)); /*old webkit*/
+    background:-webkit-linear-gradient(#f9f9f9, #ededed); /*new webkit*/
+    background:-moz-linear-gradient(#f9f9f9, #ededed); /*gecko*/
+    background:-ms-linear-gradient(#f9f9f9, #ededed); /*IE10*/
+    background:-o-linear-gradient(#f9f9f9, #ededed); /*opera 11.10+*/
+    background:linear-gradient(#f9f9f9, #ededed); /*future CSS3 browsers*/
+    -pie-background:linear-gradient(#f9f9f9, #ededed); /*PIE*/	
+}
+
+.white:hover {
+    background:#ededed; /*fallback for non-CSS3 browsers*/
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#ededed) to(#f9f9f9)); /*old webkit*/
+    background:-webkit-linear-gradient(#ededed, #f9f9f9); /*new webkit*/
+    background:-moz-linear-gradient(#ededed, #f9f9f9); /*gecko*/
+    background:-ms-linear-gradient(#ededed, #f9f9f9); /*IE10*/
+    background:-o-linear-gradient(#ededed, #f9f9f9); /*opera 11.10+*/
+    background:linear-gradient(#ededed, #f9f9f9); /*future CSS3 browsers*/
+    -pie-background:linear-gradient(#ededed, #f9f9f9); /*PIE*/	
 }
 
 

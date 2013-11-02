@@ -4,7 +4,10 @@
 * {
 	margin:0;
 	padding:0;
+	-moz-user-select:none;
+	-webkit-user-select:none;
 }
+
 body {
 	font-family:sans-serif;
 	font-size:18px;
@@ -15,25 +18,40 @@ body {
 header {
 	width:100%;
 	height:75px;
-	padding:10px;
+	padding:10px 40px;
 	background-color:#333333;
 	position:fixed;
 	top:0;
 }
 
 
-#radiusControls {
-	width:20%;
-	margin:25px 0 0 0;
+#brand {
+	display:inline-block;
+	font-family: 'Lobster', cursive;
+	color:#CC0E00;
 }
 
-.radiusValueControl {
-	width:30px;
-	height:30px;
+
+#brush {
+	width:20%;
+	margin:25px 0 0 25px;
+	display:inline-block;
+}
+
+.brushSizeControl {
+	width:27px;
+	height:27px;
+	margin:0 0 0 10px;
 	padding:6px 3px 0 3px;
 	display:inline-block;
-	background-color:#666666;
+	background-color:#4c4c4c;
 	text-align:center;
+	cursor:pointer;
 }
+
+.brushSizeControl:last-child {
+	margin:0;
+}
+
 
 

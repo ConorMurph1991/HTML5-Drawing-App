@@ -6,22 +6,20 @@ var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
 /* Drawing Variables */
-var radius = 10;
+var brushSize = 10;
 var isMouseMoving = false;
 
 /* Setting width and height of the canvas */
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-context.lineWidth = radius * 2;
+context.lineWidth = brushSize * 2;
 
 
 /* Checks if mouse is down */
 var startDraw = function(e) {
-
 	isMouseMoving = true;
 	draw(e);
-
 }
 
 /* Function to allow user to draw */
@@ -32,7 +30,7 @@ var draw = function(e) {
 		context.lineTo(e.clientX, e.clientY);
 		context.stroke();
 		context.beginPath();
-		context.arc(e.clientX, e.clientY, radius, 0, Math.PI * 2);
+		context.arc(e.clientX, e.clientY, brushSize, 0, Math.PI * 2);
 		context.fill();
 		context.beginPath();
 		context.moveTo(e.clientX, e.clientY);
@@ -42,10 +40,8 @@ var draw = function(e) {
 
 /* Checks if mouse is up */
 var endDraw = function() {
-
 	isMouseMoving = false;
 	context.beginPath();
-
 }
 
 

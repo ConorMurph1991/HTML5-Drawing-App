@@ -23,11 +23,19 @@ body {
 header {
 	width:100%;
 	height:75px;
-	padding:10px 40px;
+	padding:5px 0;
 	background-color:#111111;
 	position:fixed;
 	top:0;
 }
+
+
+.container{
+	width:90%;
+	margin:0 5%;
+	padding:0;
+}
+
 
 
 .button {
@@ -50,6 +58,28 @@ header {
 }
 
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+
 
 /* ====================
 
@@ -58,8 +88,8 @@ header {
    ==================== */
 
 #brushArea {
-	width:20%;
-	margin:25px 0 0 25px;
+	margin:25px 0 0 0;
+	float:left;
 }
 
 #brushArea p {
@@ -71,6 +101,31 @@ header {
 #increaseSize {
 	margin:0;
 }
+
+
+
+/* ====================
+
+	Brush Area Styles
+	
+   ==================== */
+
+#colourPaletteArea {
+	margin:25px 0 0 0;
+	float:right;
+}
+
+.swatch {
+	background-color:cyan;
+}
+
+.active {
+	border:1px solid #ffffff;
+	box-shadow:inset 0 1px 2px #111111;	
+	-moz-box-shadow:inset 0px 1px 2px rgba(17, 17, 17, 0.7);/*gecko - mozilla*/ 
+	-webkit-box-shadow:inset 0px 1px 2px rgba(17, 17, 17, 0.7);/*new webkit - Chrome and Safari*/	
+}
+
 
 
 

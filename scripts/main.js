@@ -17,13 +17,13 @@ context.lineWidth = brushSize * 2;
 
 
 /* Checks if mouse is down */
-var startDraw = function(e) {
+function startDraw(e) {
 	isMouseMoving = true;
 	draw(e);
 }
 
 /* Function to allow user to draw */
-var draw = function(e) {
+function draw(e) {
 
 	if(isMouseMoving)
 	{
@@ -39,7 +39,7 @@ var draw = function(e) {
 }
 
 /* Checks if mouse is up */
-var endDraw = function() {
+function endDraw() {
 	isMouseMoving = false;
 	context.beginPath();
 }

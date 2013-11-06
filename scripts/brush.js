@@ -11,7 +11,7 @@ var increaseSize_button = document.getElementById("increaseSize");
 
 
 /* Sets the size of the brush */
-var setBrushSize = function(newBrushSize) {
+function setBrushSize(newBrushSize) {
 
 	if(newBrushSize < minSize)
 	{
@@ -37,12 +37,12 @@ var setBrushSize = function(newBrushSize) {
 }
 
 /* Decreasing the size of the brush */
-var decreaseBrushSize = function() {
+function decreaseBrushSize() {
 	setBrushSize(brushSize - 5);
 }
 
 /* Increasing the size of the brush */
-var increaseBrushSize = function() {
+function increaseBrushSize() {
 	
 	if(brushSize == minSize)
 	{
@@ -57,5 +57,5 @@ var increaseBrushSize = function() {
 
 
 /* Brush Buttons Event Listeners */
-decreaseSize_button.addEventListener("mouseup", decreaseBrushSize);
-increaseSize_button.addEventListener("mouseup", increaseBrushSize);
+decreaseSize_button.addEventListener("click", decreaseBrushSize);
+increaseSize_button.addEventListener("click", increaseBrushSize);
